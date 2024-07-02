@@ -5,10 +5,10 @@ import { NavigationProvider } from "./_components/NavigationContext";
 
 export default async function Home() {
   const res = await fetch(
-    "https://strapi-demo-n4vr.onrender.com/api/demo-apps"
+    "https://outsource-services-project-strapi.onrender.com/api/navigations"
   );
   const res2 = await fetch(
-    "https://strapi-demo-n4vr.onrender.com/api/landings"
+    "https://outsource-services-project-strapi.onrender.com/api/landings"
   );
 
   const data = await res.json();
@@ -17,7 +17,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col justify-center gap-20 py-10 items-center">
-      <Header />
+      <Header data={data2} />
       <div className="flex justify-around w-full">
         {/* <div className="grid grid-cols-[1fr_0.5fr] w-full"> */}
 

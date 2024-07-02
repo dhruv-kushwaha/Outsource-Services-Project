@@ -3,14 +3,17 @@
 import { useNavigation } from "./NavigationContext";
 
 function NavItem({ name, id }) {
-  const { setTitle, title } = useNavigation();
+  const { setTitle, title, setId } = useNavigation();
 
   return (
     <div
       className={`relative translate-x-56 rounded-l-full  flex items-center w-80 justify-between px-6 py-3 hover:bg-pink-700 cursor-pointer hover:text-white ${
         title === name ? "bg-pink-700 text-white" : "bg-gray-200"
       }`}
-      onClick={() => setTitle(name)}
+      onClick={() => {
+        setTitle(name);
+        setId(id);
+      }}
     >
       <span className="font-semibold">
         <svg

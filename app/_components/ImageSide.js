@@ -5,6 +5,7 @@ import circle from "@/public/circle.png";
 import dark_circle from "@/public/dark-circle.png";
 import Heading from "./Heading";
 import Description from "./Description";
+import MainImage from "./MainImage";
 
 function ImageSide({ data }) {
   return (
@@ -32,13 +33,7 @@ function ImageSide({ data }) {
               className="opacity-80"
             />
           </div>
-          <Image
-            src={pic}
-            fill
-            alt="Girl Working"
-            // objectFit="cover"
-            className="rounded-full object-cover"
-          />
+          <MainImage />
         </div>
       </div>
     </div>
