@@ -3,6 +3,8 @@ import ImageSide from "./_components/ImageSide";
 import Navigation from "./_components/Navigation";
 import { NavigationProvider } from "./_components/NavigationContext";
 
+export const revalidate = 0;
+
 export default async function Home() {
   const res = await fetch(
     "https://outsource-services-project-strapi.onrender.com/api/navigations"
