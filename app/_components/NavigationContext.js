@@ -5,6 +5,7 @@ const { createContext, useState, useContext } = require("react");
 const NavigationContext = createContext();
 
 const initialState = "Industry Experts";
+// const initialState = 1;
 
 function NavigationProvider({ children }) {
   const [title, setTitle] = useState(initialState);

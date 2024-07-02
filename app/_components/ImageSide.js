@@ -4,8 +4,9 @@ import pic from "@/public/pic.jpg";
 import circle from "@/public/circle.png";
 import dark_circle from "@/public/dark-circle.png";
 import Heading from "./Heading";
+import Description from "./Description";
 
-function ImageSide() {
+function ImageSide({ data }) {
   return (
     <div className="translate-x-[20rem] ">
       <div className="relative">
@@ -18,10 +19,7 @@ function ImageSide() {
           </div>
           <div className="mx-16 my-28 flex flex-col gap-4">
             <Heading />
-            <p className="text-white">
-              Lorem ultrices neque ornare aenean euismod elementum nisi quis
-              eleifend quam adipisc ing
-            </p>
+            <Description data={data} />
           </div>
         </div>
         <div className="rounded-full  z-1 absolute -left-14 h-[26rem]  w-[26rem]">
@@ -38,8 +36,8 @@ function ImageSide() {
             src={pic}
             fill
             alt="Girl Working"
-            objectFit="cover"
-            className="rounded-full"
+            // objectFit="cover"
+            className="rounded-full object-cover"
           />
         </div>
       </div>

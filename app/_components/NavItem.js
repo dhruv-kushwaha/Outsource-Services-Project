@@ -2,7 +2,7 @@
 
 import { useNavigation } from "./NavigationContext";
 
-function NavItem({ name }) {
+function NavItem({ name, id }) {
   const { setTitle, title } = useNavigation();
 
   return (
